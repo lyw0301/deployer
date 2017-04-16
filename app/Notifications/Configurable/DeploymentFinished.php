@@ -75,6 +75,10 @@ abstract class DeploymentFinished extends Notification
             $this->translator->trans('notifications.last_commit')     => $this->deployment->short_commit,
         ];
 
+        if (!empty($this->project->url)) {
+            $table[$this->translator->trans('notifications.project_url')] = $this->project->url;
+        }
+
         $action = route('deployments', ['id' => $this->deployment->id]);
 
         $email = (new MailMessage())
@@ -119,6 +123,10 @@ abstract class DeploymentFinished extends Notification
             $this->translator->trans('notifications.committer') => $this->deployment->committer,
             $this->translator->trans('notifications.branch')    => $this->deployment->branch,
         ];
+
+        if (!empty($this->project->url)) {
+            $fields[$this->translator->trans('notifications.project_url')] = $this->project->url;
+        }
 
         return (new SlackMessage())
             ->from(null, $notification->config->icon)
@@ -228,6 +236,15 @@ abstract class DeploymentFinished extends Notification
                             ->style(CardAttributeStyles::GENERAL)
                             ->value($this->deployment->branch);
                     });
+
+                if (!empty($this->project->url)) {
+                    $card->addAttribute(function (CardAttribute $attribute) {
+                        $attribute
+                            ->label($this->translator->trans('notifications.project_url'))
+                            ->value($this->project->url)
+                            ->url($this->project->url);
+                    });
+                }
             });
     }
 }

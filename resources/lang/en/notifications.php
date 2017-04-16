@@ -19,6 +19,7 @@ return [
 
     // Email
     'project_name'            => 'Project name',
+    'project_url'             => 'Project URL',
     'deployed_branch'         => 'Deployed branch',
     'deployment_details'      => 'View the deployment',
     'project_details'         => 'View the project',
