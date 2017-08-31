@@ -168,7 +168,7 @@ return [
         /*
          * Package Service Providers...
          */
-        BackupManager\Laravel\Laravel5ServiceProvider::class,
+        //BackupManager\Laravel\Laravel5ServiceProvider::class,
         Creativeorange\Gravatar\GravatarServiceProvider::class,
         Fideloper\Proxy\TrustedProxyServiceProvider::class,
         GrahamCampbell\Binput\BinputServiceProvider::class,
@@ -180,7 +180,7 @@ return [
         McCool\LaravelAutoPresenter\AutoPresenterServiceProvider::class,
         MicheleAngioni\MultiLanguage\MultiLanguageBindServiceProvider::class,
         MicheleAngioni\MultiLanguage\MultiLanguageServiceProvider::class,
-        NotificationChannels\HipChat\HipChatServiceProvider::class,
+        //NotificationChannels\HipChat\HipChatServiceProvider::class,
         NotificationChannels\Twilio\TwilioProvider::class,
         PragmaRX\Google2FA\Vendor\Laravel\ServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,

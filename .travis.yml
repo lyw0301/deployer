@@ -62,7 +62,6 @@ script:
 
   # Clear the compiled file and then try to install without the dev dependencies to ensure everything still works
   - travis_retry composer install --no-dev --no-interaction --prefer-dist --no-suggest --quiet
-  - php artisan optimize
   - php artisan app:version
 
 after_script:

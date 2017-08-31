@@ -20,19 +20,16 @@
         "source": "https://github.com/REBELinBLUE/deployer"
     },
     "require-disabled": {
+        "backup-manager/laravel": "^1.1",
         "laravel-notification-channels/hipchat": "~0.2",
-        "laravel-notification-channels/twilio": "~1.0.2",
-        "laravel-notification-channels/webhook": "~1.0.2",
-        "melihovv/laravel-log-viewer": "^1.2"
+        "laravel-notification-channels/webhook": "~1.0.2"
     },
     "require": {
         "php": ">=7.0",
         "andywer/js-localization": "dev-laravel-5",
-        "backup-manager/laravel": "^1.1",
         "creativeorange/gravatar": "~1.0",
-        "cweagans/composer-patches": "^1.6",
         "doctrine/dbal": "~2.5",
-        "fideloper/proxy": "^3.1",
+        "fideloper/proxy": "^3.3",
         "graham-campbell/binput": "~4.0",
         "htmlmin/htmlmin": "~5.0",
         "guzzlehttp/guzzle": "^6.2",
@@ -40,9 +37,11 @@
         "laracademy/interactive-make": "^1.1",
         "laravel/framework": "^5.5",
         "laravel/tinker": "1.0.*",
+        "laravel-notification-channels/twilio": "~2.0.1",
         "lubusin/laravel-decomposer": "^1.0",
         "mccool/laravel-auto-presenter": "^6.2",
-        "michele-angioni/multi-language": "0.3",
+        "melihovv/laravel-log-viewer": "dev-master",
+        "michele-angioni/multi-language": "0.4",
         "pda/pheanstalk": "~3.1",
         "pragmarx/google2fa": "^1.0.0",
         "predis/predis": "~1.0",
@@ -51,7 +50,7 @@
     },
     "require-dev": {
         "andreas-weber/php-junit-merge": "^1.0",
-        "barryvdh/laravel-ide-helper": "^2.1",
+        "barryvdh/laravel-ide-helper": "^2.4.1",
         "block8/php-docblock-checker": "^1.1",
         "codeclimate/php-test-reporter": "^0.4.4",
         "filp/whoops": "^2.0",
@@ -69,14 +68,11 @@
         "phpunit/phpcov": "3.1.0",
         "phpunit/phpunit": "~5.7",
         "sebastian/phpcpd": "^3.0",
-        "spatie/laravel-migrate-fresh": "dev-php56",
+        "spatie/laravel-migrate-fresh": "~1.5.1",
         "squizlabs/php_codesniffer": "~2.5",
         "symfony/yaml": "^3.2",
         "themsaid/laravel-langman": "~1.3.4"
     },
-    "repositories": [
-        { "type": "vcs", "url": "https://github.com/REBELinBLUE/laravel-migrate-fresh" }
-    ],
     "autoload": {
         "classmap": [
             "database"
@@ -95,9 +91,7 @@
             "php artisan clear-compiled"
         ],
         "post-install-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "([ -f .env ] && [ -z \"$TRAVIS\" ] && sed -i 's/DB_TYPE=/DB_CONNECTION=/g' .env) || exit 0",
-            "([ -f .env ] && [ -z \"$TRAVIS\" ] && php artisan optimize) || exit 0"
+            "Illuminate\\Foundation\\ComposerScripts::postInstall"
         ],
         "pre-update-cmd": [
             "php artisan clear-compiled"
@@ -106,18 +100,17 @@
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan ide-helper:generate",
             "php artisan ide-helper:meta",
-            "php artisan ide-helper:models --nowrite",
-            "php artisan optimize"
+            "php artisan ide-helper:models --nowrite"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "php artisan package:discover"
         ]
     },
     "extra": {
-        "patches": {
-            "michele-angioni/multi-language": {
-                "Laravel 5.4 support for PHP 5.6": "https://www.phpdeployment.org/patches/0002-Multilanguage.patch"
-            },
-            "laravel-notification-channels/twilio": {
-                "5.4 bug fix": "https://www.phpdeployment.org/patches/0003-dependency-resolution-bug.patch"
-            }
+        "laravel": {
+            "dont-discover": [
+            ]
         }
     },
     "config": {
