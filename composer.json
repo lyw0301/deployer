@@ -75,7 +75,8 @@
     },
     "autoload": {
         "classmap": [
-            "database"
+            "database/seeds",
+            "database/factories"
         ],
         "psr-4": {
             "REBELinBLUE\\Deployer\\": "app/"
@@ -90,14 +91,10 @@
         "pre-install-cmd": [
             "php artisan clear-compiled"
         ],
-        "post-install-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postInstall"
-        ],
         "pre-update-cmd": [
             "php artisan clear-compiled"
         ],
         "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan ide-helper:generate",
             "php artisan ide-helper:meta",
             "php artisan ide-helper:models --nowrite"
