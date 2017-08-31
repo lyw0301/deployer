@@ -28,16 +28,16 @@
         "php": ">=7.0",
         "andywer/js-localization": "dev-laravel-5",
         "creativeorange/gravatar": "~1.0",
-        "doctrine/dbal": "~2.5",
+        "doctrine/dbal": "2.5.13",
         "fideloper/proxy": "^3.3",
         "graham-campbell/binput": "~4.0",
-        "htmlmin/htmlmin": "~5.0",
         "guzzlehttp/guzzle": "^6.2",
+        "htmlmin/htmlmin": "~5.0",
         "intervention/image": "^2.3",
         "laracademy/interactive-make": "^1.1",
+        "laravel-notification-channels/twilio": "~2.0.1",
         "laravel/framework": "^5.5",
         "laravel/tinker": "1.0.*",
-        "laravel-notification-channels/twilio": "~2.0.1",
         "lubusin/laravel-decomposer": "^1.0",
         "mccool/laravel-auto-presenter": "^6.2",
         "melihovv/laravel-log-viewer": "dev-master",
@@ -107,6 +107,7 @@
     "extra": {
         "laravel": {
             "dont-discover": [
+                "laravel/dusk"
             ]
         }
     },
