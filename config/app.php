@@ -169,23 +169,23 @@ return [
         /*
          * Package Service Providers...
          */
-        //BackupManager\Laravel\Laravel5ServiceProvider::class,
+        // BackupManager\Laravel\Laravel5ServiceProvider::class,
         Creativeorange\Gravatar\GravatarServiceProvider::class,
-        Fideloper\Proxy\TrustedProxyServiceProvider::class,
-        GrahamCampbell\Binput\BinputServiceProvider::class,
-        GrahamCampbell\Security\SecurityServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
-        Laracademy\Commands\MakeServiceProvider::class,
-        //Laravel\Tinker\TinkerServiceProvider::class,
-        Lubusin\Decomposer\DecomposerServiceProvider::class,
-        McCool\LaravelAutoPresenter\AutoPresenterServiceProvider::class,
+        // Fideloper\Proxy\TrustedProxyServiceProvider::class,
+        // GrahamCampbell\Binput\BinputServiceProvider::class,
+        // GrahamCampbell\Security\SecurityServiceProvider::class,
+        // Intervention\Image\ImageServiceProvider::class,
+        // Laracademy\Commands\MakeServiceProvider::class,
+        // Laravel\Tinker\TinkerServiceProvider::class,
+        // Lubusin\Decomposer\DecomposerServiceProvider::class,
+        // McCool\LaravelAutoPresenter\AutoPresenterServiceProvider::class,
         MicheleAngioni\MultiLanguage\MultiLanguageBindServiceProvider::class,
         MicheleAngioni\MultiLanguage\MultiLanguageServiceProvider::class,
-        //NotificationChannels\HipChat\HipChatServiceProvider::class,
+        // NotificationChannels\HipChat\HipChatServiceProvider::class,
         NotificationChannels\Twilio\TwilioProvider::class,
         PragmaRX\Google2FA\Vendor\Laravel\ServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
-        Melihovv\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        // Melihovv\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 
         /*
          * Application Service Providers...

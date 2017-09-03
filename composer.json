@@ -21,7 +21,6 @@
     },
     "require-disabled": {
         "backup-manager/laravel": "^1.1",
-        "laravel-notification-channels/hipchat": "~0.2",
         "laravel-notification-channels/webhook": "~1.0.2"
     },
     "require": {
@@ -35,6 +34,7 @@
         "htmlmin/htmlmin": "~5.0",
         "intervention/image": "^2.3",
         "laracademy/interactive-make": "^1.1",
+        "laravel-notification-channels/hipchat": "~1.0",
         "laravel-notification-channels/twilio": "~2.0.1",
         "laravel/framework": "^5.5",
         "laravel/tinker": "1.0.*",
@@ -104,7 +104,9 @@
     "extra": {
         "laravel": {
             "dont-discover": [
-                "laravel/dusk"
+                "laravel/dusk",
+                "laracademy/interactive-make",
+                "barryvdh/laravel-ide-helper"
             ]
         }
     },
