@@ -7,12 +7,12 @@
         <link rel="author" href="humans.txt" />
 
         <!-- Style -->
-        <link href="{{ elixir('css/vendor.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ elixir('css/app.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ ('/css/vendor.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
-            <script src="{{ elixir('js/ie.js') }}"></script>
+            <script src="{{ ('js/ie.js') }}"></script>
         <![endif]-->
 
         <meta name="token" content="{{ Session::token() }}" />
@@ -56,8 +56,8 @@
             </div>
         </div>
 
-        <script src="{{ elixir('js/vendor.js') }}"></script>
-        <script src="{{ elixir('js/app.js') }}"></script>
+        <script src="{{ ('/js/vendor.js') }}"></script>
+        <script src="{{ mix('js/app.js') }}"></script>
 
         @stack('templates')
         @stack('javascript')
