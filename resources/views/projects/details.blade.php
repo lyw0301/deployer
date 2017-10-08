@@ -113,21 +113,21 @@
 
 @push('javascript')
     <script type="text/javascript">
-        new app.ServersTab();
-        new app.SharedFilesTab();
-        new app.ConfigFilesTab();
-        new app.NotificationsTab();
-        new app.HeartbeatsTab();
-        new app.VariablesTab();
-        new app.CheckUrlsTab();
+        new app.views.Servers();
+        new app.views.Variables();
+        new app.views.SharedFiles();
+        new app.views.ConfigFiles();
+        new app.views.Notifications();
+        new app.views.Heartbeats();
+        new app.views.CheckUrls();
 
-        app.Servers.add({!! $servers->toJson() !!});
-        app.SharedFiles.add({!! $sharedFiles->toJson() !!});
-        app.ConfigFiles.add({!! $configFiles->toJson() !!});
-        app.Notifications.add({!! $channels->toJson() !!});
-        app.Heartbeats.add({!! $heartbeats->toJson() !!});
-        app.CheckUrls.add({!! $checkUrls->toJson() !!});
-        app.Variables.add({!! $variables->toJson() !!});
+        app.collections.Servers.add({!! $servers->toJson() !!});
+        app.collections.Variables.add({!! $variables->toJson() !!});
+        app.collections.SharedFiles.add({!! $sharedFiles->toJson() !!});
+        app.collections.ConfigFiles.add({!! $configFiles->toJson() !!});
+        app.collections.Notifications.add({!! $channels->toJson() !!});
+        app.collections.Heartbeats.add({!! $heartbeats->toJson() !!});
+        app.collections.CheckUrls.add({!! $checkUrls->toJson() !!});
 
         app.project_id = {{ $project->id }};
     </script>
