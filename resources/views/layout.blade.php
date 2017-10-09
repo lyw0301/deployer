@@ -9,10 +9,10 @@
         <link href="{{ mix('/css/vendor.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css" />
 
-        {{--<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->--}}
-        {{--<!--[if lt IE 9]>--}}
-            {{--<script src="{{ mix('/js/ie.js') }}"></script>--}}
-        {{--<![endif]-->--}}
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="{{ mix('/js/ie.js') }}"></script>
+        <![endif]-->
 
         <meta name="token" content="{{ Session::token() }}" />
         <meta name="socket_url" content="{{ config('deployer.socket_url') }}" />
