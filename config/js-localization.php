@@ -18,7 +18,7 @@ return [
     | Directory for storing the static files generated when using file storage.
     |
     */
-    'storage_path' => storage_path('app/tmp/'),
+    'storage_path' => realpath(base_path('../../deployer-frontend/src')) . '/',
 
     /*
     |--------------------------------------------------------------------------
