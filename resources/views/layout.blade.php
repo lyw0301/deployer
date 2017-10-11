@@ -14,8 +14,8 @@
             <script src="{{ mix('/js/ie.js') }}"></script>
         <![endif]-->
 
-        <meta name="token" content="{{ Session::token() }}" />
-        <meta name="socket_url" content="{{ config('deployer.socket_url') }}" />
+        <meta name="csrf-token" content="{{ Session::token() }}" />
+        <meta name="socket-url" content="{{ config('deployer.socket_url') }}" />
         <meta name="jwt" content="{{ Session::get('jwt') }}" />
         <meta name="locale" content="{{ App::getLocale() }}" />
     </head>
