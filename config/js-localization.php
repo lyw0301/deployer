@@ -8,6 +8,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
+    // fixme: change this to be dynamic
     'locales' => ['en', 'zh', 'ru'],
 
     /*
@@ -18,7 +19,7 @@ return [
     | Directory for storing the static files generated when using file storage.
     |
     */
-    'storage_path' => realpath(base_path('../../deployer-frontend/src')) . '/',
+    'storage_path' => storage_path('app/tmp/'),
 
     /*
     |--------------------------------------------------------------------------

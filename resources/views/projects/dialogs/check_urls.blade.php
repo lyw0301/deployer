@@ -35,7 +35,7 @@
                             <li>
                                 <div class="radio">
                                     <label for="period_{{ $time }}">
-                                        <input type="radio" class="checkurl-period" name="period" id="checkurl_period_{{ $time }}" value="{{ $time }}" @if ($time === 30) checked @endif /> {{ $time }} {{ trans('checkUrls.length') }}
+                                        <input type="radio" class="checkurl-period" name="period" id="checkurl_period_{{ $time }}" value="{{ $time }}" @if ($time === 30) checked @endif /> {{ trans('checkUrls.length', ['time' => $time]) }}
                                     </label>
                                 </div>
                             </li>
