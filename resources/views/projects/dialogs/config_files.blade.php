@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-group">
                         <label for="config-file-content">{{ trans('configFiles.content') }}</label>
-                        <div id="config_file_content" class="form-control"></div>
+                        <div id="configfile_content" class="form-control"></div>
                     </div>
                 </div>
                 <div class="modal-footer">
